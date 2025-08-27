@@ -1,0 +1,138 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chatHeader {
+    padding: 15px;
+    text-align: center;
+    background-color: #1a1a1a;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+}
+
+.chatMessages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #0078d4 #2d2d2d;
+}
+
+/* Custom scrollbar */
+.chatMessages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatMessages::-webkit-scrollbar-thumb {
+    background: #0078d4;
+    border-radius: 4px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    max-width: 70%;
+}
+
+/* Sent Messages */
+.message.sent {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message.sent .messageContent {
+    background: rgba(0, 120, 212, 0.8);
+    color: #fff;
+}
+
+/* Received Messages */
+.message.received {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.message.received .messageContent {
+    background: rgba(68, 68, 68, 0.9);
+    color: #fff;
+}
+
+/* Username Styling */
+.messageUsername {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #f0f0f0;
+    opacity: 0.9;
+}
+
+/* Message Content */
+.messageContent {
+    padding: 10px 14px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Timestamp */
+.messageTime {
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+/* Chat Input */
+.chatInput {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #1a1a1a;
+    border-top: 2px solid #444;
+}
+
+/* Input Field */
+.chatInput input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Focus effect on input */
+.chatInput input:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Send Button */
+.chatInput button {
+    background: #0078d4;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.chatInput button:hover {
+    background: #005bb5;
+}
+
+/* Send Icon */
+.sendIcon {
+    font-size: 16px;
+}

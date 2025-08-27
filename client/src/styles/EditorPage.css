@@ -1,0 +1,147 @@
+/* EditorPage.css */
+
+/* Import Coding Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@300;400;500;600;700&display=swap');
+
+/* Module Content Styling */
+.moduleContent {
+  padding: 10px;
+  background: #1f2937;
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 0;
+}
+
+/* Editor Container */
+.editorWrap {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #1f2937;
+  border-left: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(59, 130, 246, 0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  color: #bfdbfe;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Compiler Styling */
+.compiler {
+  padding: 10px;
+  background: #1f2937;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.compiler select {
+  background: #374151;
+  color: #e5e7eb;
+  border: 1px solid rgba(55, 65, 81, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.compiler select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.compiler button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.compiler button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.compiler textarea {
+  width: 100%;
+  background: #374151;
+  color: #e5e7eb;
+  border: 1px solid rgba(55, 65, 81, 0.3);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.compiler textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.compiler pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Custom Scrollbar for Files and Participants Sections */
+.files-section::-webkit-scrollbar,
+.participants-section::-webkit-scrollbar {
+  width: 5px;
+}
+
+.files-section::-webkit-scrollbar-track,
+.participants-section::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 6px;
+}
+
+.files-section::-webkit-scrollbar-thumb,
+.participants-section::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 6px;
+}
+
+.files-section::-webkit-scrollbar-thumb:hover,
+.participants-section::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Header Bar */
+.header-bar {
+  background: #111827;
+  border-bottom: 1px solid rgba(55, 65, 81, 0.3);
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Settings Panel */
+.settings-panel select {
+  font-family: 'Roboto Mono', monospace;
+}
